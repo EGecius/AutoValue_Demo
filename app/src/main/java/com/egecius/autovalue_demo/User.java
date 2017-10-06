@@ -11,6 +11,9 @@ public abstract class User {
     abstract String lastName();
 
     static User of(String firstName, String lastName) {
+        // if Builder would be used here, constructor would be private
         return new AutoValue_User(firstName, lastName);
     }
+
+
 }
