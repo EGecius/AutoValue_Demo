@@ -9,6 +9,10 @@ public abstract class BuiltUser {
     abstract String firstName();
     abstract String lastName();
 
+    public static Builder builder() {
+        return new AutoValue_BuiltUser.Builder();
+    }
+
 //does not compile since constructor is private with Builder
 //    static BuiltUser of(String firstName, String lastName) {
 //        return new AutoValue_BuiltUser(firstName, lastName);
