@@ -10,7 +10,10 @@ public abstract class BuiltUser {
     abstract String lastName();
 
     public static Builder builder() {
-        return new AutoValue_BuiltUser.Builder();
+        AutoValue_BuiltUser.Builder builder = new AutoValue_BuiltUser.Builder();
+        return builder
+                .firstName("unknown")
+                .lastName("unknown");
     }
 
 //does not compile since constructor is private with Builder
